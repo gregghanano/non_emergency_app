@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'sessions/create'
 
+  get '/auth/uber'
+
   get '/auth/:uber/callback', to: 'sessions#create'
 
   root 'user#index'
